@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Navbar from "./Navbar";
+
 import Portfolio from "./Portfolio";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import Project from "./Project";
 import "./App.css";
+import NavBar from "./NavBar";
 
 const App = () => {
   const [dark, setDark] = useState(true);
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <div className={dark ? "dark" : "light"}>
       <BrowserRouter>
-        <Navbar
+        <NavBar
           dark={dark}
           setDark={setDark}
           hireCount={hireCount}
