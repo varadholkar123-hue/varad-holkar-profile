@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ChatBot from "./ChatBot";
 
-const NavBar = ({ dark, setDark, hireCount, lang, setLang }) => {
+const Navbar = ({ dark, setDark, hireCount, lang, setLang }) => {
   const [openChat, setOpenChat] = useState(false);
 
   return (
     <>
       <nav className="navbar">
-
         <div className="logo">VARAD</div>
 
         <ul className="nav-links">
-
           <li><Link to="/">{lang === "en" ? "HOME" : "होम"}</Link></li>
           <li><Link to="/about">{lang === "en" ? "ABOUT" : "माझ्याबद्दल"}</Link></li>
           <li><Link to="/work">{lang === "en" ? "WORK" : "काम"}</Link></li>
@@ -33,7 +31,7 @@ const NavBar = ({ dark, setDark, hireCount, lang, setLang }) => {
             </button>
           </li>
 
-          {/* 🔥 TRANSLATE BUTTON (MAIN PART) */}
+          {/* LANGUAGE */}
           <li>
             <button
               className="nav-btn"
@@ -47,7 +45,6 @@ const NavBar = ({ dark, setDark, hireCount, lang, setLang }) => {
           <li className="notify">
             🔔 {hireCount > 0 && <span className="badge">{hireCount}</span>}
           </li>
-
         </ul>
       </nav>
 
@@ -56,4 +53,4 @@ const NavBar = ({ dark, setDark, hireCount, lang, setLang }) => {
   );
 };
 
-export default NavBar;
+export default Navbar;
