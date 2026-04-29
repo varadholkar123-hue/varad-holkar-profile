@@ -7,7 +7,7 @@ import Work from "./Work";
 import Contact from "./Contact";
 import Project from "./Project";
 import "./App.css";
-import Navbar from "./Navbar"; // ✅ FIXED
+import NavBar from "./Navbar"; // ✅ FIXED
 
 const App = () => {
   const [dark, setDark] = useState(true);
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div className={dark ? "dark" : "light"}>
       <BrowserRouter>
-        <Navbar
+        <NavBar
           dark={dark}
           setDark={setDark}
           hireCount={hireCount}
